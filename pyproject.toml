@@ -1,9 +1,0 @@
-[project]
-name = "python-template"
-version = "0.1.0"
-description = ""
-authors = ["ANDRIUX"]
-requires-python = ">=3.11"
-dependencies = [
-    "telegram>=0.0.1",
-]
