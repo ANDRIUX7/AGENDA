@@ -1,3 +1,0 @@
-python-telegram-bot==20.3
-pip==24.2
-setuptools==72.1.0
