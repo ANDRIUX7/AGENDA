@@ -1,3 +1,19 @@
+# --- Servidor web para que Render marque Live ---
+from flask import Flask
+import os, threading
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot online 💖"
+
+def run():
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
+threading.Thread(target=run).start()
+# --- Fin del servidor web ---
+
 from telegram import Update, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 import os
@@ -35,5 +51,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
